@@ -1,18 +1,13 @@
 package de.dignum.app.actions;
 
-import org.apache.commons.lang3.Range;
-
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class actions {
 
     static List<Integer> original_numbers = new ArrayList<>();
     static List<Integer> numbers = new ArrayList<>();
-
-    public static int count = 0;
-    public static int position = 0;
-    public static boolean flag = false;
 
     public static void read_directory(File folder) {
         File[] files = folder.listFiles();
