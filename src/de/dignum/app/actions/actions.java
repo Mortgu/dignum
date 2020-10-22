@@ -14,9 +14,8 @@ public class actions {
         System.out.println("reading directory: " + folder);
         File[] files = folder.listFiles();
         assert files != null;
-        for(File file : files) {
+        for(File file : files)
             addNumber(file);
-        }
 
         // CHECK IF NUMBER IS CORRECT
         int[] a = numbers.stream().mapToInt(i->i).toArray();

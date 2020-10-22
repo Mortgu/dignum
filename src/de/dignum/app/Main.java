@@ -7,6 +7,7 @@ import java.io.File;
 public class Main {
 
     public static void main(String[] args) {
+        new Window();
         actions.read_directory(new File("C:\\Users\\oskar\\Desktop\\test"));
     }
 }
