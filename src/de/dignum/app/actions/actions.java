@@ -7,7 +7,7 @@ import java.util.List;
 public class actions {
 
     static List<Integer> numbers = new ArrayList<>();
-    static List<Integer> missing_numbers = new ArrayList<>();
+    public static List<Integer> missing_numbers = new ArrayList<>();
     static List<String> wrong_files = new ArrayList<>();
 
     public static void read_directory(File folder) {
