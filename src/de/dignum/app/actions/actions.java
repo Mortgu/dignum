@@ -1,8 +1,10 @@
 package de.dignum.app.actions;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class actions {
 
@@ -61,5 +63,20 @@ public class actions {
 
     static boolean isCorrect(File file) {
         return !file.getName().contains("xxx");
+    }
+
+    public static String read_file(File file) {
+        if(!file.exists()) System.out.println("ERROR: file " + file.getName() + " dose not exists.");
+
+        String file_path = null;
+        try {
+            Scanner scanner = new Scanner(file);
+
+            file_path = scanner.nextLine();
+
+        } catch (FileNotFoundException exception) {
+            System.out.println("ERROR: faild to read file - " + file.getName());
+        }
+        return file_path;
     }
 }
