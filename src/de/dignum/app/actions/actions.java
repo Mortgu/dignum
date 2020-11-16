@@ -16,8 +16,14 @@ public class actions {
         System.out.println("reading directory: " + folder);
         File[] files = folder.listFiles();
         assert files != null;
-        for(File file : files)
-            addNumber(file);
+        for(File file : files) {
+            try () {
+                addNumber(file);
+            } catch (NumberFormatException exeption) {
+                System.out.println("Could not read file: " + file.getName() + ".");
+                continue;
+            }
+        }
 
         // CHECK IF NUMBER IS CORRECT
         int[] a = numbers.stream().mapToInt(i->i).toArray();
