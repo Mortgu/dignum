@@ -17,10 +17,10 @@ public class actions {
         File[] files = folder.listFiles();
         assert files != null;
         for(File file : files) {
-            try () {
+            try {
                 addNumber(file);
             } catch (NumberFormatException exeption) {
-                System.out.println("Could not read file: " + file.getName() + ".");
+                System.out.println("Could not read file: " + file.getName() + ",");
                 continue;
             }
         }
